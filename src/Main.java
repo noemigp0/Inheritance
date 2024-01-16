@@ -1,4 +1,8 @@
 import accounts.*;
+import shapes.Circle;
+import shapes.Shape;
+import shapes.Square;
+import shapes.Triangle;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,8 +55,25 @@ public class Main {
         System.out.println(gold.getRewardPoints());
         System.out.println(diamond.getRewardPoints());*/
 
-        Account account1 = new CheckingAccounts(500, 0.025, 1000);
-        CheckingAccounts account2 = new GoldChekingAccount(1000, 0.032, 2500);
+        //Account account1 = new CheckingAccounts(500, 0.025, 1000);
+        //CheckingAccounts account2 = new GoldChekingAccount(1000, 0.032, 2500);
+
+        displayShape(new Square());
+
+
+
+    }
+
+    static void displayShape(Shape shape){
+       System.out.println(shape.getName());
+       shape.draw();
+       System.out.println("Sides: " + shape.getSideCount() );
+
+
+       if(shape instanceof  Square){
+            Square square = (Square) shape;
+            System.out.println(square.getShapeType());
+       }
 
 
 

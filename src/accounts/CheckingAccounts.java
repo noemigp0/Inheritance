@@ -1,6 +1,6 @@
 package accounts;
 
-public class CheckingAccounts extends Account{
+public abstract class CheckingAccounts extends Account{
     public int rewardPoints;
     public CheckingAccounts(double balance, double interestRate, int rewardPoints) {
         super(balance, interestRate);
@@ -17,9 +17,9 @@ public class CheckingAccounts extends Account{
         return true;
     }
 
-    public int calculateRewardPoint(double cost){
-        return (int) (cost * 10);
-    }
+    public abstract  int calculateRewardPoint(double cost);
+
+
 
     public int getRewardPoints() {
         return rewardPoints;

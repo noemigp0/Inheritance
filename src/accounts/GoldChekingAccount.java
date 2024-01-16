@@ -7,7 +7,8 @@ public class GoldChekingAccount  extends CheckingAccounts{
 
     @Override
     public int calculateRewardPoint(double cost) {
-         return (int) (Math.min(cost, 4000) * 50);
-
+        return 0;
     }
+
+
 }
